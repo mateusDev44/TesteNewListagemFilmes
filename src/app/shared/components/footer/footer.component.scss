@@ -1,0 +1,67 @@
+.caixa {
+  background-color: rgb(107, 7, 107);
+  background-position: center;
+}
+
+.iconCheck {
+  color: white;
+}
+
+.iconCheck:hover {
+  color: green;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.btn {
+  color: white;
+}
+
+.btn:hover {
+  background-color: blue;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  background: rgb(5, 226, 134);
+  animation: pulse 500ms infinite alternate;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  background: white;
+}
+
+.top {
+  top: 10px;
+}
+
+.left {
+  left: 10px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9) rotate(-135deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(-135deg);
+  }
+}
+
+@media (max-width: 1152px) {
+}

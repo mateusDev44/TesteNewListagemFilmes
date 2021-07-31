@@ -1,0 +1,20 @@
+.filmes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin-left: 70px;
+    background-color: rgb(107, 7, 107);
+    color: white;
+  }
+}
+
+.close {
+  cursor: pointer;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: red;
+}

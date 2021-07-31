@@ -1,0 +1,56 @@
+<div class="container" style="margin-top: 100px">
+  <h3 class="text-center">Listagem de Filmes</h3>
+
+  <hr class="my-4" />
+
+  <section id="filmes">
+    <div class="filmes">
+      <div class="row">
+        <div class="col-sm" *ngFor="let f of filmes">
+          <div class="card mt-4" style="width: 100%">
+            <img src="{{ f.poster }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ f.nome }}</h5>
+              <p class="card-text">{{ f.descricao.substr(0, 100) }}...</p>
+              <a class="btn" (click)="open(content, f)">Ver detalhes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title" style="margin: 0 auto">
+      {{ filme.nome }}
+    </h4>
+    <span class="close" (click)="d('Cross click')">
+      <i class="bi bi-x-square-fill"></i>
+    </span>
+  </div>
+
+  <div class="container d-flex">
+    <img
+      src="{{ filme.poster }}"
+      alt="Poster"
+      class="img-thumbnail"
+      width="50%"
+      height="100px"
+    />
+
+    <span>
+      <ul>
+        <li>Ano</li>
+        <p>{{ filme.ano }}</p>
+        <li>Diretor</li>
+        <p>{{ filme.diretor }}</p>
+        <li>Genero</li>
+        <p>{{ filme.genero }}</p>
+        <li>Descricao</li>
+        <p>{{ filme.descricao }}</p>
+      </ul>
+    </span>
+  </div>
+</ng-template>

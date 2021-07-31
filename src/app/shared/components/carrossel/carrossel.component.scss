@@ -1,0 +1,21 @@
+.jumbotron {
+  width: 50%;
+  background-color: rgb(107, 7, 107);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  border-radius: 100px;
+  color: white;
+}
+
+@media (max-width: 646px) {
+  .jumbotron {
+    width: 350px;
+  }
+}
+
+@media (max-width: 366px) {
+  .jumbotron {
+    width: 100%;
+  }
+}
